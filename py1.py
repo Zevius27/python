@@ -144,8 +144,14 @@ provided by the user.
 
 # l7
 # test of dictionary
-dict1 = {"key1": "value1", "key2":"value2"}
-print(dict1.keys())
-print(dict1.values())
-list1 = list(dict1.values())
-print(list1[1]) # output : value2
+# dict1 = {"key1": "value1", "key2": "value2"}
+# print(dict1.keys())
+# print(dict1.values())
+# list1 = list(dict1.values())
+# print(list1[1])  # output : value2
+
+
+# l8
+# clg example
+# a= range(10)
+# print(type(a))
