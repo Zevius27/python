@@ -140,3 +140,12 @@ provided by the user.
 
 
 # print(result)
+
+
+# l7
+# test of dictionary
+dict1 = {"key1": "value1", "key2":"value2"}
+print(dict1.keys())
+print(dict1.values())
+list1 = list(dict1.values())
+print(list1[1]) # output : value2
