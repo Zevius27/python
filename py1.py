@@ -158,5 +158,22 @@ provided by the user.
 
 
 # l9
-list2 = [1,23,4,5,6,9]
-print(list2[0:5])
+# list2 = [1,23,4,5,6,9]
+# print(list2[0:5])
+
+
+
+# l10
+# rows = int(input("Enter a number"))
+# i = 1
+# while i <= rows:
+#     j=rows
+#     while j > i:
+#         print(" ",end=" ")
+#         j=j-1
+#     k=1
+#     while k<=i:
+#         print("*",end=" ")
+#         k=k+1
+#     print()
+#     i = i + 1
