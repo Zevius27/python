@@ -153,5 +153,10 @@ provided by the user.
 
 # l8
 # clg example
-# a= range(10)
+# a = range(10)
 # print(type(a))
+
+
+# l9
+list2 = [1,23,4,5,6,9]
+print(list2[0:5])
