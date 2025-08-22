@@ -177,3 +177,11 @@ provided by the user.
 #         k=k+1
 #     print()
 #     i = i + 1
+
+
+
+# l11
+list3 = [1,"ravi",14.6]
+
+for i in list3:
+    print(i)
