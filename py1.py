@@ -162,7 +162,6 @@ provided by the user.
 # print(list2[0:5])
 
 
-
 # l10
 # rows = int(input("Enter a number"))
 # i = 1
@@ -179,9 +178,27 @@ provided by the user.
 #     i = i + 1
 
 
-
 # l11
-list3 = [1,"ravi",14.6]
+# list3 = [1,"ravi",14.6]
 
-for i in list3:
-    print(i)
+# for i in list3:
+#     print(i)
+
+
+# l12
+# reverse a string / list
+# text = "Hello world, how are you?"
+# words = text.split()
+# words.append("Hello")
+# print(words)
+# Output: ['Hello', 'world,', 'how', 'are', 'you?']
+# text = "Hello world, how are you?"
+# words = text.split()
+# words.extend("Hello")
+# print(words)
+# Output: ['Hello', 'world,', 'how', 'are', 'you?', 'H', 'e', 'l', 'l', 'o']
+# text = "Hello world, how are you?"
+# words = text.split().reverse
+# words.insert(6, "Hello")
+# print(words)
+#  Output: ['Hello', 'world,', 'how', 'are', 'you?']
