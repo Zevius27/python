@@ -204,9 +204,10 @@ provided by the user.
 #  Output: ['Hello', 'world,', 'how', 'are', 'you?']
 
 
-# # l13
-# # Does the tuple[0:5] print fifth index value
+# l13
+# Does the tuple[0:5] print fifth index value
 # tuple1 = (0, 1, 2, 3, 4, 5, 6, 7)
 # a = 5
 # print(tuple1[0:a])  # (0, 1, 2, 3, 4)  doesnt include 5th index
 # print(tuple1[:-a])  # (0, 1, 2) include 5th index
+# print(tuple1[::-1])  # (7, 6, 5, 4, 3, 2, 1, 0)
