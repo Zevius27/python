@@ -215,12 +215,17 @@ provided by the user.
 
 
 #l14
-fruit="banana"
-print(fruit[:3])#ban
-print(fruit[3:])#ana
-print(fruit[3:3])#  " Doesn't print anything"
-print(fruit[:])#banana
+# fruit="banana"
+# print(fruit[:3])#ban
+# print(fruit[3:])#ana
+# print(fruit[3:3])#  " Doesn't print anything"
+# print(fruit[:])#banana
 
+
+# # l15
+# tuple = [1,2,3,4]
+# tuple = tuple + [5]
+# print(tuple)
 
 
 
