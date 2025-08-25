@@ -211,3 +211,16 @@ provided by the user.
 # print(tuple1[0:a])  # (0, 1, 2, 3, 4)  doesnt include 5th index
 # print(tuple1[:-a])  # (0, 1, 2) include 5th index
 # print(tuple1[::-1])  # (7, 6, 5, 4, 3, 2, 1, 0)
+
+
+
+#l14
+fruit="banana"
+print(fruit[:3])#ban
+print(fruit[3:])#ana
+print(fruit[3:3])#  " Doesn't print anything"
+print(fruit[:])#banana
+
+
+
+
