@@ -231,3 +231,15 @@ provided by the user.
 
 
 
+
+# # l16
+# set1 = {1,2,3}   # is set if not given key value pairs
+# print(type(set1))
+
+
+
+# # l17
+# num: int = "str"
+# print(num)
+
+
