@@ -243,3 +243,10 @@ provided by the user.
 # print(num)
 
 
+
+
+# l18
+# set1 = {"a","c"}
+# set1.add(1)
+# set1.add("b")
+# print(set1)
