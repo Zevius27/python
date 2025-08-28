@@ -249,4 +249,5 @@ provided by the user.
 # set1 = {"a","c"}
 # set1.add(1)
 # set1.add("b")
-# print(set1)
+# for i in set1:
+#     print(i)
