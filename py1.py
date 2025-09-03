@@ -251,3 +251,65 @@ provided by the user.
 # set1.add("b")
 # for i in set1:
 #     print(i)
+
+
+
+
+
+
+
+
+
+# 19
+# get test
+# my_dict = {"a": 1, "b": 2, "c": 1}
+# for i in my_dict:
+#     print("key :" ,i,"value :", my_dict[i] )
+#     print("key :" ,i,"value :", my_dict.get(i) )
+
+
+
+
+
+
+
+
+
+# l20 distructuring
+# my_dict = {"a": 1, "b": 2, "c": 1}
+
+# value = 1
+# keys = [k for k, v in my_dict.items() if v == value]
+# print(keys)  # Output: ["a", "c"]
+
+
+
+
+
+# l21 is the int iterable and index able
+# z = 12345   # int is not subscriptable
+# z = str(z)
+# z = z[::-1]
+# print(z)
+
+
+
+# l22
+# decimal.getcontext
+# from decimal import Decimal, getcontext
+
+# # check default context
+# # print(getcontext())
+
+# # set precision to 5
+# getcontext().prec = 9
+
+# # now calculations use precision = 5
+# x = Decimal("1") / Decimal("7")
+# print(x)  # result limited to 5 significant digits
+
+
+
+# # l23
+# from itertools import chain
+# print(list(chain("ABC", "DEF")))  # ['A','B','C','D','E','F']
