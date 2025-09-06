@@ -213,8 +213,7 @@ provided by the user.
 # print(tuple1[::-1])  # (7, 6, 5, 4, 3, 2, 1, 0)
 
 
-
-#l14
+# l14
 # fruit="banana"
 # print(fruit[:3])#ban
 # print(fruit[3:])#ana
@@ -228,21 +227,14 @@ provided by the user.
 # print(tuple)
 
 
-
-
-
-
 # # l16
 # set1 = {1,2,3}   # is set if not given key value pairs
 # print(type(set1))
 
 
-
 # # l17
 # num: int = "str"
 # print(num)
-
-
 
 
 # l18
@@ -253,26 +245,12 @@ provided by the user.
 #     print(i)
 
 
-
-
-
-
-
-
-
 # 19
 # get test
 # my_dict = {"a": 1, "b": 2, "c": 1}
 # for i in my_dict:
 #     print("key :" ,i,"value :", my_dict[i] )
 #     print("key :" ,i,"value :", my_dict.get(i) )
-
-
-
-
-
-
-
 
 
 # l20 distructuring
@@ -283,15 +261,11 @@ provided by the user.
 # print(keys)  # Output: ["a", "c"]
 
 
-
-
-
 # l21 is the int iterable and index able
 # z = 12345   # int is not subscriptable
 # z = str(z)
 # z = z[::-1]
 # print(z)
-
 
 
 # l22
@@ -309,7 +283,45 @@ provided by the user.
 # print(x)  # result limited to 5 significant digits
 
 
-
 # # l23
 # from itertools import chain
 # print(list(chain("ABC", "DEF")))  # ['A','B','C','D','E','F']
+
+
+# l24
+
+# for i in 123:        # Not iterable
+#     print(i)
+
+
+
+
+
+# l25
+# Write a python program takes in a number and find the sum
+# of digits in a number
+
+# def sumDigit(num):
+#     sum = 0
+#     for i in str(num):
+#         i = int(i)
+#         sum += i 
+#     print(sum)
+
+# a = 12345
+# sumDigit(a)
+
+
+
+
+
+# l26
+# map parameter check
+# def addition(x,y):
+#     return (x+y)
+# res = map(addition,[1,3,4],[1,3,4])
+# print(list(res))
+
+
+
+# l27
