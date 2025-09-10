@@ -294,9 +294,6 @@ provided by the user.
 #     print(i)
 
 
-
-
-
 # l25
 # Write a python program takes in a number and find the sum
 # of digits in a number
@@ -305,14 +302,11 @@ provided by the user.
 #     sum = 0
 #     for i in str(num):
 #         i = int(i)
-#         sum += i 
+#         sum += i
 #     print(sum)
 
 # a = 12345
 # sumDigit(a)
-
-
-
 
 
 # l26
@@ -323,5 +317,69 @@ provided by the user.
 # print(list(res))
 
 
-
 # l27
+# class Test:
+#     def show():
+#         print("Hello")
+
+# obj = Test()
+# obj.show()  # ❌ TypeError
+
+
+#  l28
+# class test:
+#     x = 10
+#     def __init__(self, name="zevius", age="19"):
+#         self.name = name
+#         self.age = age
+#     def showVal(self):
+#         print(self.name,self.age,self.x)
+# t = test()
+# t.showVal()
+
+
+# #   l29
+# class test:
+#     def __init__(self):
+#         print("constructor")
+#     def __del__(self):
+#         print("Destructor")
+
+
+# t1 = test()
+# t1.__init__()
+# t1.__del__()
+# print("Last Line")
+
+
+# # l30
+# class test:
+#     __pri_var = 10
+#     _pro_var = 20
+
+#     def Increment(self):
+#         print("Initial val")
+#         print("private var =", self.__pri_var)
+#         print("protected var =", self._pro_var)
+#         print("Incremented val")
+#         self.__pri_var += 1
+#         self._pro_var += 1
+#         print(" Inc private var =", self.__pri_var)
+#         print(" Inc protected var =", self._pro_var)
+
+
+# t1 = test()
+# t1.Increment()
+# t1.Increment()
+# t1.Increment()
+
+
+
+
+
+
+
+
+# l31
+Ls = [2,2,3,4]
+print(Ls.index(2))
