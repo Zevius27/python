@@ -380,6 +380,48 @@ provided by the user.
 
 
 
-# l31
-Ls = [2,2,3,4]
-print(Ls.index(2))
+# # l31
+# Ls = [2,2,3,4]
+# print(Ls.index(2))
+
+
+
+# l32 
+# for i in range(15,0,-1):
+#     print(i)
+
+#  l33
+# l = [1,2,3,4]
+# # l.pop(2)
+# # del l[2:-1]
+# print(l)
+
+
+# l34
+# class a:
+#     a = 10
+#     def sayHello(self):
+#         print("Hello", self.a)
+
+
+# z = a()
+# z.sayHello()
+
+
+# l35
+
+# print(f.read(10))      # read first 10 chars
+# print(f.readline())    # read one line
+# print(f.readlines())   # read all lines into a list
+
+# for line in f:         # loop through lines
+#     print(line.strip())
+
+
+# Append
+# f = open("example.txt", "a")
+# f.write("\nAppended Line")
+
+# f = open("example.txt", "r")
+# print(f.read())        # read entire file
+# f.close()
