@@ -21,13 +21,27 @@
 # 3. 2 steps + 1 step
  
 
+# Input : n = 4
+# Output : 5
+# 1. 1,1,1,1
+# 2. 1,1,2
+# 3. 1,2,1
+# 4. 2,1,1
+# 5. 2,2
+
 # Constraints:
 
 # 1 <= n <= 45
 
 
-
 class Solution:
     def climbStairs(self, n: int) -> int:
-        pass
-        
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+
+        a, b = 1, 2   # f(1), f(2)
+        for i in range(3, n+1):
+            a, b = b, a + b   # shift forward like Fibonacci
+        return b
