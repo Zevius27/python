@@ -374,19 +374,12 @@ provided by the user.
 # t1.Increment()
 
 
-
-
-
-
-
-
 # # l31
 # Ls = [2,2,3,4]
 # print(Ls.index(2))
 
 
-
-# l32 
+# l32
 # for i in range(15,0,-1):
 #     print(i)
 
@@ -427,12 +420,6 @@ provided by the user.
 # f.close()
 
 
-
-
-
-
-
-
 # l36
 # print("Hello",end= " ") # prints in new line #use end = " " for removing \n
 # print("world")
@@ -444,26 +431,27 @@ provided by the user.
 # print(obj.read())
 
 
-
-
-
-# l38 
+# l38
 # # Open file in read+write mode
 # with open("example.txt", "r+") as f:
 #     # Move the file pointer to position 5 (index starts from 0)
-#     f.seek(6)  
-    
+#     f.seek(6)
+
 #     # Write new content starting from that position
 #     f.write("HELLO")
 
 
+# # l39
+# with open("example.txt", "r+") as f:
+#     content = f.read()
+#     pos = 5
+#     new_content = content[:pos] + "HELLO" + content[pos:]
+#     # Move pointer to start before rewriting
+#     f.seek(0)
+#     f.write(new_content)
+#     f.truncate()  # remove old extra content if any
 
-# l39
-with open("example.txt", "r+") as f:
-    content = f.read()
-    pos = 5
-    new_content = content[:pos] + "HELLO" + content[pos:]
-    # Move pointer to start before rewriting
-    f.seek(0)
-    f.write(new_content)
-    f.truncate()  # remove old extra content if any
+
+# l40
+# mapping = {')': '(', ']': '[', '}': '{'}
+# print(mapping.values())
