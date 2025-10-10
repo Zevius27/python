@@ -455,3 +455,10 @@ provided by the user.
 # l40
 # mapping = {')': '(', ']': '[', '}': '{'}
 # print(mapping.values())
+
+
+
+
+# # 41
+# for i in range(226):
+#     print(str(hex(i))[2:] + "  -  " , i)

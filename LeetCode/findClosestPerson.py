@@ -12,7 +12,6 @@
 # Return 0 if both arrive at the same time.
 # Return the result accordingly.
 
- 
 
 # Example 1:
 
@@ -50,24 +49,10 @@
 # Person 2 is at position 5 and can reach Person 3 in 2 steps.
 # Since both Person 1 and Person 2 reach Person 3 at the same time, the output is 0.
 
- 
 
 # Constraints:
 
 # 1 <= x, y, z <= 100
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Solution:
