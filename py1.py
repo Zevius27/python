@@ -457,8 +457,229 @@ provided by the user.
 # print(mapping.values())
 
 
-
-
 # # 41
 # for i in range(226):
 #     print(str(hex(i))[2:] + "  -  " , i)
+
+# 42
+# a = [2,3,6,7,8,9]
+# a[2:6] = [9,9,9,7]
+# print(a)
+
+
+# 43 global / local var
+
+# a = 1000
+# class zev:
+#     def __init__(self):
+#         self.a = a
+
+#     def printa(self):
+#         b = 2000
+#         print(b)
+#         print(a)
+
+# z = zev()
+# z.printa()
+
+
+# # 44 Tuple creation
+# t = (1, 3, 4)
+# print(t)
+# t1 = tuple((9,9,9,9))
+# print(t1)
+
+# 45
+
+# listName = [7,8,9,8]
+# listName.remove(8)
+# #listName = [7,9,8]
+# print(listName)
+
+
+# 46
+
+# class Book:
+#     def __init__(self, title, price):
+#         self.title = title
+#         self.price = price
+#     def displayDetails(self):
+#         print(self.title)
+#         print(self.price)
+
+
+# B = Book("Zev", 19)
+# B.displayDetails()
+
+
+# 47
+
+# print(True or True and False)
+
+
+
+
+# # 48
+# # Using default arguments
+# class Calculator:
+#     def add(self, a, b=0, c=0):
+#         return a + b + c
+
+# calc = Calculator()
+# print(calc.add(5))          # Output: 5
+# print(calc.add(5, 10))      # Output: 15
+# print(calc.add(5, 10, 15))  # Output: 30
+
+# # Using *args
+# class MathOperations:
+#     def multiply(self, *args):
+#         result = 1
+#         for num in args:
+#             result *= num
+#         return result
+
+# math_op = MathOperations()
+# print(math_op.multiply(2))           # Output: 2
+# print(math_op.multiply(2, 3))        # Output: 6
+# print(math_op.multiply(2, 3, 4))     # Output: 24
+
+# # Using type checking
+# class Display:
+#     def show(self, data):
+#         if isinstance(data, int):
+#             print(f"Integer: {data}")
+#         elif isinstance(data, str):
+#             print(f"String: {data}")
+#         elif isinstance(data, list):
+#             print(f"List: {data}")
+
+# disp = Display()
+# disp.show(10)           # Integer: 10
+# disp.show("Python")     # String: Python
+# disp.show([1, 2, 3])    # List: [1, 2, 3]
+
+
+
+
+
+
+
+# # 49
+# import numpy as np
+
+# # Creating arrays
+# arr1 = np.array([1, 2, 3, 4, 5])
+# print("1D Array:", arr1)
+
+# arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+# print("2D Array:\n", arr2)
+
+# # Array operations
+# print("Sum:", np.sum(arr1))
+# print("Mean:", np.mean(arr1))
+# print("Max:", np.max(arr1))
+# print("Min:", np.min(arr1))
+
+# # Array creation functions
+# zeros = np.zeros((2, 3))
+# print("Zeros:\n", zeros)
+
+# ones = np.ones((3, 2))
+# print("Ones:\n", ones)
+
+# range_arr = np.arange(0, 10, 2)
+# print("Range:", range_arr)
+
+# # Mathematical operations
+# arr3 = np.array([1, 2, 3])
+# arr4 = np.array([4, 5, 6])
+
+# print("Addition:", arr3 + arr4)
+# print("Multiplication:", arr3 * arr4)
+# print("Square:", arr3 ** 2)
+
+# # Indexing and slicing
+# matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# print("Element at [1,2]:", matrix[1, 2])
+# print("First row:", matrix[0, :])
+# print("Second column:", matrix[:, 1])
+
+
+
+
+
+
+
+# # 50
+# class A:
+#     def show(self):
+#         print("A")
+
+# class B(A):
+#     def show(self):
+#         super().show()
+#         print("B")
+
+# class C(A):
+#     def show(self):
+#         super().show()
+#         print("C")
+
+# class D(B, C):
+#     def show(self):
+#         super().show()
+#         print("D")
+
+# obj = D()
+# obj.show()
+
+
+
+# # 51 
+# # Read contents from first.txt and write to second.txt
+
+# # Read contents from first.txt and write to second.txt
+
+# f = open("first.txt", "w+")
+# f.write("Hello")
+
+# f.seek(0)              # Move pointer back to start
+# textTxt = f.read()
+
+# g = open("second.txt", "w+")
+# g.write(textTxt)
+
+# g.seek(0)              # Move pointer back to start
+# print(g.read())
+
+
+
+
+
+
+# # 52
+# my_tuple = (1, 2, 3, 2, 4, 2, 5)
+# count = my_tuple.count(2)
+# print(f"Number of 2's: {count}")  # Output: 3
+
+
+# 53 factorial
+# num = 5
+# fact = 1
+# for i in range(2,num+1):
+#     fact = fact * i
+
+# print(fact)
+
+
+
+
+
+
+# 54 check 
+# f = open("second.txt","w")
+# z = open("first.txt","r")
+# text = z.read()
+# f.write(text)
+
+
