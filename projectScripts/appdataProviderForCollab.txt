@@ -1,0 +1,106 @@
+
+
+
+
+
+
+
+
+def fileAndFolderInfo():
+    # Solution 1: Install newer Chromium via snap or direct download
+    !pip install selenium webdriver-manager
+
+    # Remove old chromium and install newer version
+    !apt-get remove -y chromium-browser chromium-chromedriver
+    !apt-get autoremove -y
+
+
+    # Check current version and reinstall if needed
+    !wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+    !echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+    !apt-get update -qq
+    !apt-get install -y google-chrome-stable
+
+    # Install dependencies that might be missing
+    !apt-get install -y libxss1 libappindicator1 libindicator7
+
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+    from time import sleep
+
+    # Configure Chrome Options for Colab
+    options = Options()
+    options.add_argument('--headless=new')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--remote-debugging-port=9222')
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_argument('--window-size=1920,1080')
+
+    # Use Google Chrome binary
+    options.binary_location = '/usr/bin/google-chrome-stable'
+
+    try:
+        # Use webdriver-manager to automatically get the correct chromedriver
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        
+        print("Browser initialized successfully.")
+        driver.get("https://gofile.io/d/pLp39s")
+        print("Page loaded successfully.")
+
+        # Wait for content to load
+        sleep(5)
+
+        # Get appdata as Python dict
+        appdata = driver.execute_script("return appdata;")
+
+        if appdata:
+            file_names = []
+            folder_names = []
+            file_links = []
+
+            content_data = appdata.get('fileManager', {}).get('mainContent', {}).get('data', {})
+            children = content_data.get('children', {})
+
+            for child_id, child in children.items():
+                if child.get('type') == 'file':
+                    file_names.append(child.get('name'))
+                    file_links.append(child.get('link'))
+                elif child.get('type') == 'folder':
+                    folder_names.append(child.get('name'))
+
+            print("\nFile names:")
+            for name in file_names: 
+                print(f"  - {name}")
+
+            print("\nFolder names:")
+            for name in folder_names: 
+                print(f"  - {name}")
+
+            print("\nLinks:")
+            for name in file_links: 
+                print(f"  - {name}")
+
+            # Create a dictionary mapping file names to links
+            file_info = dict(zip(file_names, file_links))
+            
+
+        else:
+            print("Could not retrieve appdata.")
+            print("Page source preview:", driver.page_source[:500])
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        # Try to get more info
+        import subprocess
+        result = subprocess.run(['google-chrome-stable', '--version'], capture_output=True, text=True)
+        print(f"Chrome version: {result.stdout.strip()}")
+
+    finally:
+        if 'driver' in locals():
+            driver.quit()
+            print("\nBrowser closed.")
